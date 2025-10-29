@@ -1,0 +1,51 @@
+.footer-section{
+    background-color: #050807;
+}
+.footer-section {
+  position: relative; /* Required for the pseudo-element to be positioned correctly */
+  overflow: hidden; /* Prevents the large gradients from causing scrollbars */
+}
+
+.footer-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0; /* Sits *behind* your content (which is z-index-10) */
+
+  /* These are the two radial gradients */
+  background-image: 
+    /* 1. Top-right arc */
+    radial-gradient(
+      circle at 120% -10%, /* Positioned off-screen to the top-right */
+      rgba(40, 200, 140, 0.25) 5%, /* Green glow with 25% opacity */
+      transparent 40% /* Fades to transparent */
+    ),
+    
+    /* 2. Middle-left arc */
+    radial-gradient(
+      circle at -20% 70%, /* Positioned off-screen to the middle-left */
+      rgba(40, 200, 140, 0.2) 5%, 
+      transparent 35%
+    );
+  
+  background-repeat: no-repeat;
+  
+  /* Adds a soft blur to the gradients to make them smoother */
+  filter: blur(60px);
+}
+
+/* Define the animation keyframes.
+  'translateX(-50%)' moves the content left by the exact 
+  width of your *first* set of items, creating a perfect loop.
+*/
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
