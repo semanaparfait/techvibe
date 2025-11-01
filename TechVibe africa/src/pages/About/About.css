@@ -1,19 +1,22 @@
-.services-section{
-    background-color: #050807;
-}
-.services-section {
-  /* position: relative; Required for the pseudo-element to be positioned correctly */
-  /* overflow: hidden; Prevents the large gradients from causing scrollbars */
+.about-content{
+background-color: #050807;
+position: relative;
+ /* Required for the pseudo-element to be positioned correctly */
+overflow: hidden;
+ /* Prevents the large gradients from causing scrollbars */
+ 
+
 }
 
-.services-section::before {
+
+.about-content::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 0; /* Sits *behind* your content (which is z-index-10) */
+  /* z-index: 0; Sits *behind* your content (which is z-index-10) */
 
   /* These are the two radial gradients */
   background-image: 
@@ -35,4 +38,5 @@
   
   /* Adds a soft blur to the gradients to make them smoother */
   filter: blur(60px);
+  pointer-events: none;
 }

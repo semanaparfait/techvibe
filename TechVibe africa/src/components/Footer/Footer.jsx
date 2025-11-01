@@ -21,8 +21,8 @@ function Footer() {
         </div>
       </div>
       <div>
-        <h1 className='font-bold text-2xl mb-7 text-white border-l-4 border-green-500 pl-2'>Quick Links</h1>
-        <ul>
+        <h1 className='font-bold text-2xl mb-7 text-white border-l-4 border-green-500 pl-2 cursor-pointer'>Quick Links</h1>
+        <ul className='cursor-pointer'>
           <li>Home</li>
           <li>About Us</li>
           <li>Services</li>

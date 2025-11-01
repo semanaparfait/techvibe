@@ -18,6 +18,7 @@ nav{
 }
 .nav-links::after{
     content: "";
+    color: #13a337;
     position: absolute;
     bottom: 0;
     left: 0;
