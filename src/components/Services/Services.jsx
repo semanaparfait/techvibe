@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from "react";
-import './services.css'
+import './Services.css'
 import {
   Laptop,
   ShieldCheck,
