@@ -13,6 +13,7 @@ import {
   Repeat,
   BookOpen,
 } from "lucide-react";
+import './Service.css'
 function Service() {
   const [isVisible, setIsVisible] = useState(false);
 const services = [
