@@ -3,9 +3,30 @@ import './About.css'
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import about from '../../assets/about/about1.jpg'
+import ngwino from '../../assets/team/ngwino.jpg'
 
 function About() {
     const [visible,setVisible]=useState("about")
+    const team =[
+      {
+        name: "SEMANA SHEMA Parfait",
+        role: "Full Stack developer",
+        img: ngwino,
+      },{
+        name: "BISANGWA Ally Faith",
+        role: "UI/UX Designer",
+        img: ngwino,
+      },{
+        name: "Christian Ngwino Regnante",
+        role: "Systems Analyst",
+        img: ngwino,
+      },{
+        name: "MURAMIRABAGABO Gilbert",
+        role: "DevOps Engineer",
+        img: ngwino,
+      }
+
+    ]
   return (
     <section>
       <Navbar variant="about" />
@@ -25,7 +46,9 @@ function About() {
           </p>
         </div>
       </div>
-<div className="about-content text-white  flex flex-wrap items-center justify-evenly px-6 py-10 min-h-screen ">
+      <div className='about-content z-50'>
+
+<div className=" text-white  flex flex-wrap items-center justify-evenly px-6 py-10 min-h-screen ">
   {/* Left Image */}
   <div className="w-full md:w-1/2 flex justify-center">
     <img src={about} alt="About TechVibe Africa" className="rounded-xl md:w-3/4" />
@@ -171,7 +194,7 @@ function About() {
 
     </div>
 
-    <div className='grid grid-cols-2 text-center gap-3'>
+    <div className='grid grid-cols-2 text-center gap-10 md:gap-20'>
         <div className='text-center'>
             <h1 className='font-bold text-3xl'>5+</h1>
             <p>Year of experience</p>
@@ -190,7 +213,29 @@ function About() {
         </div>
     </div>
   </div>
+
 </div>
+{/* ---------meet our team section------------ */}
+  <div className='team-containerr'><br />
+    <h1 className='text-center font-semibold text-3xl text-white'>Meet Our <span className='bg-green-950 text-white py-2 px-3 rounded-tl-2xl rounded-br-2xl'>Team</span></h1><br />
+    <div className='flex items-center justify-evenly flex-wrap gap-3'>
+{team.map((member,index)=>(
+    <div key={index} className="team-member-card bg-[#e5e5e5] flex flex-col items-center gap-3 px-4 py-14 border rounded-full shadow-lg">
+        <div className="member-photo-placeholder">
+            {/* <i className="fa-solid fa-user fa-5x text-gray-400"></i> */}
+            <img src={member.img} alt={`${member.name} member name`}  className='w-40 h-40 rounded-full '/>
+
+        </div>
+        <h3 className="member-name font-semibold">{member.name}</h3>  
+        <p className="member-role text-green-950">{member.role}</p>
+        <button className='bg-green-950 cursor-pointer text-white py-1 px-3 rounded-tl-2xl rounded-br-2xl'>Talk to {member.name.split(" ").pop()}</button>
+
+    </div>
+))}
+    </div>
+    
+  </div>
+      </div>
 
       <Footer />
     </section>

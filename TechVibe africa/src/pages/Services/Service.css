@@ -1,0 +1,149 @@
+.servicespage-body{
+background-color: #050807;
+position: relative;
+ /* Required for the pseudo-element to be positioned correctly */
+overflow: hidden;
+ /* Prevents the large gradients from causing scrollbars */
+ 
+
+}
+
+
+.servicespage-body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* z-index: 0; Sits *behind* your content (which is z-index-10) */
+
+  /* These are the two radial gradients */
+  background-image: 
+    /* 1. Top-right arc */
+    radial-gradient(
+      circle at 110% -10%, /* Positioned off-screen to the top-right */
+      rgba(40, 200, 140, 0.25) 5%, /* Green glow with 25% opacity */
+      transparent 40% /* Fades to transparent */
+    ),
+    
+    /* 2. Middle-left arc */
+    radial-gradient(
+      circle at -10% 70%, /* Positioned off-screen to the middle-left */
+      rgba(40, 200, 140, 0.2) 5%, 
+      transparent 35%
+    );
+  
+  background-repeat: no-repeat;
+  
+  /* Adds a soft blur to the gradients to make them smoother */
+  filter: blur(60px);
+  pointer-events: none;
+}
+.step-number{
+
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 35px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.step-description1,
+.step-description2,
+.step-description3 {
+  position: relative;
+  /* padding: 1.5rem; */
+  /* background: rgba(11, 15, 14, 0.7); */
+  backdrop-blur: 5px;
+  /* border-radius: 1rem; */
+  /* border: 1px solid #2c2c2c; */
+  transition: all 0.3s;
+  border: none;
+}
+
+
+.step-description1::after
+ {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -20px; /* distance from box */
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 53px solid transparent;
+  border-bottom: 54px solid transparent;
+  border-left: 20px solid #07669c; /* same as background */
+}
+.step-description2::after
+ {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -20px; /* distance from box */
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 53px solid transparent;
+  border-bottom: 54px solid transparent;
+  border-left: 20px solid  rgb(234 179 8 / var(--tw-bg-opacity, 1)); /* same as background */
+}
+.step-description3::after
+ {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -20px; /* distance from box */
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 53px solid transparent;
+  border-bottom: 54px solid transparent;
+  border-left: 20px solid rgb(34 211 238 / var(--tw-bg-opacity, 1)) ; /* same as background */
+}
+.steps-title{
+    text-decoration: underline;
+    
+}
+.steps-container{
+    text-align: center;
+.step1 {
+  background-color: #facc15; /* yellow-400 */
+  height: 120px; /* control the size */
+  border-top-left-radius: 120px;
+  border-top-right-radius: 120px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+    
+    .step2{
+        clip-path: polygon(0 0, 100% 0, 96% 100%, 4% 100%);
+        /* clip-path: circle(100% at 50% 50%); */
+        /* border-top-left-radius: 20px; */
+        /* border-bottom-left-radius: 0; */
+        /* border-radius: 0 0 20px 30px; keeps soft corners inside the clipped shape */
+
+    }
+        .step3{
+        clip-path: polygon(0 0, 100% 0, 98% 100%, 5% 100%);
+         clip-path: circle(90% at 50% 30%);
+        /* border-top-left-radius: 15px; */
+        /* border-bottom-left-radius: 10px; */
+        /* border-radius: 0 0 20px 30px; keeps soft corners inside the clipped shape */
+    }
+
+            .step4{
+        clip-path: polygon(0 0, 100% 0, 95% 100%, 6% 100%);
+        /* border-radius: 0 0 20px 30px; keeps soft corners inside the clipped shape */
+
+            }
+        .step5{
+        clip-path: polygon(0 0, 100% 0, 94% 100%, 7% 100%);
+        border-radius: 0 0 60px 60px; 
+        /* keeps soft corners inside the clipped shape */
+        
+    }
+}

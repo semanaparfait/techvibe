@@ -4,8 +4,8 @@ import logo from '../../assets/logo2.png'
 
 function Footer() {
   return (
-      <section>
-   <section className="footer-section min-h-screen grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-10 py-16  text-gray-400 place-items-center">
+      <section className='footer-section  '>
+   <section className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-10 pt-16  text-gray-400 place-items-center">
 
       <div>
         <div className='flex items-center mb-10'>
@@ -47,9 +47,13 @@ function Footer() {
         <p><i className="fa-solid fa-location-dot text-green-500 text-2xl"></i> Dubai, 123 Tech </p>
       </div>
       </section>
-        <footer className='py-[1.3rem] text-center border-t-2 border-gray-400  text-gray-400 bg-black  md:text-base text-sm'>
+      <h1 className='footer-name text-center text-[40px] md:text-[100px] text-white font-black  '>Techvibe Africa</h1>
+        <footer className='py-[1.3rem] text-center border-t-2 border-gray-600  text-gray-400 bg-black  md:text-base text-sm'>
           &copy;{new Date().getFullYear()}TechVibe Africa All reserved. powed by innovation
         </footer>
+        <div className='bg-[#32f08c] text-black h-[50%] hidden'>
+          <h1 className='text-center'>TeachVibe</h1>
+        </div>
     </section>
   )
 }

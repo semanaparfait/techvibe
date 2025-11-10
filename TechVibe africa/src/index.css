@@ -85,7 +85,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #16a34a; /* Your vibrant "green-600" */
+  background-color: #053918; /* Your vibrant "green-600" */
   border-radius: 10px;      /* Creates the rounded pill shape */
   border: 1px solid #111827; /* Adds a small border to match the track */
 }

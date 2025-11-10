@@ -1,10 +1,11 @@
 .footer-section{
     background-color: #050807;
+    /* background-color: aqua; */
 }
-.footer-section {
-  /* position: relative; */
+.footer-sectionn {
+  position: relative;
    /* Required for the pseudo-element to be positioned correctly */
-  /* overflow: hidden; */
+  overflow: hidden;
    /* Prevents the large gradients from causing scrollbars */
 }
 
@@ -37,6 +38,7 @@
   
   /* Adds a soft blur to the gradients to make them smoother */
   filter: blur(60px);
+  pointer-events: none;
 }
 
 /* Define the animation keyframes.
@@ -50,4 +52,7 @@
   100% {
     transform: translateX(-50%);
   }
+}
+.footer-name {
+  font-family: 'Pacifico', cursive;
 }

@@ -15,17 +15,14 @@ function Navbar({variant}) {
         {/* TechVibe Africaa */}
       </div>
       
-        <ul className='hidden md:flex gap-6 cursor-pointer font-medium text-white'>
-          <Link to="/">
-          <li className='nav-links' >Home</li>
-          </Link>
-          <Link to="about">
-          <li className='nav-links'>About</li>
-          </Link>
-          <li className='nav-links'>Services</li>
-          <li className='nav-links'>Projects</li>
-          <li className='nav-links'>Insights</li>
-        </ul>
+    <ul className='hidden md:flex gap-6 cursor-pointer font-medium text-white'>
+      <li className='nav-links'><Link to="/">Home</Link></li>
+      <li className='nav-links'><Link to="/about">About</Link></li>
+      <li className='nav-links'><Link to="/services">Services</Link></li>
+      <li className='nav-links'><Link to="/projects">Projects</Link></li>
+      <li className='nav-links'><Link to="/contact us">Contact us</Link></li>
+    </ul>
+
             
         <button className='bg-green-500 py-1 px-3 rounded-lg font-semibold cursor-pointer'>Hire us</button>
       

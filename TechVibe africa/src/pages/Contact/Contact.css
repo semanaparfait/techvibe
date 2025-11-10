@@ -1,5 +1,4 @@
-.about-content,
-.team-container{
+.contact-container{
 background-color: #050807;
 position: relative;
  /* Required for the pseudo-element to be positioned correctly */
@@ -10,16 +9,14 @@ overflow: hidden;
 }
 
 
-.about-content::before,
-.team-container::before {
+.contact-container::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 0;
-   /* Sits *behind* your content (which is z-index-10) */
+  /* z-index: 0; Sits *behind* your content (which is z-index-10) */
 
   /* These are the two radial gradients */
   background-image: 

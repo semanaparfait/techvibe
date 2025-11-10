@@ -1,5 +1,4 @@
-.about-content,
-.team-container{
+.projects-container{
 background-color: #050807;
 position: relative;
  /* Required for the pseudo-element to be positioned correctly */
@@ -10,8 +9,7 @@ overflow: hidden;
 }
 
 
-.about-content::before,
-.team-container::before {
+.projects-container::before{
   content: "";
   position: absolute;
   top: 0;
