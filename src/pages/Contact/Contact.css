@@ -1,42 +1,29 @@
-.contact-container{
-background-color: #050807;
-position: relative;
- /* Required for the pseudo-element to be positioned correctly */
-overflow: hidden;
- /* Prevents the large gradients from causing scrollbars */
- 
-
+.contact-container {
+  background-color: #050807;
+  position: relative;
+  overflow: hidden;
+  z-index: 0; /* establishes stacking context */
 }
-
 
 .contact-container::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  /* z-index: 0; Sits *behind* your content (which is z-index-10) */
-
-  /* These are the two radial gradients */
-  background-image: 
-    /* 1. Top-right arc */
+  inset: 0; /* shorthand for top, right, bottom, left = 0 */
+  z-index: -1; /* keep it just behind content, not too far */
+  
+  background-image:
     radial-gradient(
-      circle at 110% -10%, /* Positioned off-screen to the top-right */
-      rgba(40, 200, 140, 0.25) 5%, /* Green glow with 25% opacity */
-      transparent 40% /* Fades to transparent */
+      circle at 110% -10%,
+      rgba(40, 200, 140, 0.25) 5%,
+      transparent 40%
     ),
-    
-    /* 2. Middle-left arc */
     radial-gradient(
-      circle at -10% 70%, /* Positioned off-screen to the middle-left */
-      rgba(40, 200, 140, 0.2) 5%, 
+      circle at -10% 70%,
+      rgba(40, 200, 140, 0.2) 5%,
       transparent 35%
     );
   
   background-repeat: no-repeat;
-  
-  /* Adds a soft blur to the gradients to make them smoother */
   filter: blur(60px);
-  pointer-events: none;
+  pointer-events: none; /* make sure form inputs are always clickable */
 }

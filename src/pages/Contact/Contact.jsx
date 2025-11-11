@@ -5,12 +5,14 @@ import Footer from "../../components/Footer/Footer";
 
 function Contact(){
     return(
-        <section className="contact-container">
+      <section>
+
              <Navbar variant="about" />
+        <section className="contact-container">
       <div className="relative">
         <img 
           src="https://i.pinimg.com/736x/94/84/1e/94841e4bd098959bf7173166f7e67495.jpg" 
-          alt="about bg" 
+          alt="contact us bg" 
           className="h-[40vh] w-full object-cover brightness-[0.3]" 
         />
         {/* Overlay text */}
@@ -24,14 +26,66 @@ function Contact(){
         </div>
       </div><br />
 
-      <div className="flex flex-wrap justify-evenly items-center gap-4">
-        <div>
-            <form className="flex flex-col  gap-3 w-fit ">
+      <div className="flex flex-wrap justify-evenly items-center gap-4 text-white px-4">
+                <div>
+        <h1 className="font-semibold text-[30px]">Get in touch</h1>
+        <p>Have a project in mind or just want to say hi? We’d love <br /> to hear from you </p><br />
+        <div className="flex flex-col gap-4">
+
+            {/* Email */}
+            <div >
+            <div className="flex items-center justify-center md:justify-start gap-2">
+                <i className="fa-solid fa-envelope text-green-400 text-3xl"></i>
+                <div>
+                <h1 className="font-semibold text-lg">Email us</h1>
+                <p className="text-gray-500">techvibe@info.org</p>
+                <p className="text-gray-500">techvibe@info.com</p>
+                </div>
+            </div>
+            </div>
+
+            {/* Location */}
+            <div >
+            <div className="flex items-center justify-center md:justify-start gap-2">
+                <i className="fa-solid fa-location-dot text-green-400 text-3xl"></i>
+                <div>
+                <h1 className="font-semibold text-lg">Head Office</h1>
+                <p className="text-gray-500">Kigali, Rwanda</p>
+                <p className="text-gray-500">Kigali, Rwanda</p>
+                </div>
+            </div>
+
+            </div>
+                    {/* Phone */}
+            <div >
+            <div className="flex items-center justify-center md:justify-start gap-2">
+                <i className="fa-solid fa-phone-volume text-green-400 text-3xl"></i>
+                <div>
+                <h1 className="font-semibold text-lg">Call us</h1>
+                <p className="text-gray-500">(+250) 787 845 162</p>
+                <p className="text-gray-500">(+250) 787 845 162</p>
+                </div>
+            </div>
+        </div>
+
+            </div><br />
+            <hr /><br />
+            <h1>Follow our social media</h1>
+            <div className='cursor-pointer'><br />
+          <i className="fa-brands fa-facebook text-2xl"></i>
+          <i className="fa-brands fa-square-instagram text-2xl"></i>
+          <i className="fa-brands fa-square-github text-2xl"></i>
+          <i className="fa-brands fa-linkedin text-2xl"></i>
+        </div>
+        </div>
+        {/* <div> */}
+            <form className="flex flex-col  gap-3 w-fit z-20">
+              <h1 className="font-semibold text-[30px]">Send us a message</h1>
             <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2 w-full">
             <input 
                 type="email" 
                 placeholder="Email" 
-                className="border px-3 py-2 rounded-2xl w-full sm:w-[48%] outline-none "
+                className="border px-3 py-2 rounded-2xl w-full sm:w-[48%] outline-none text-black"
             />
             <input 
                 type="tel" 
@@ -44,75 +98,11 @@ function Contact(){
                 <textarea  cols="28" rows="10" placeholder="Enter your Message" className="border px-4 resize-none rounded-2xl outline-none "></textarea>
             <button className="bg-green-950 text-white py-2 rounded-2xl font-medium">Submit <i className="fa-solid fa-paper-plane"></i></button>
             </form>
-        </div>
-        <div className="px-3 md:w-[30%] rounded-2xl bg-cover bg-center brightness-[0.3] "   style={{
-    backgroundImage: "url('https://i.pinimg.com/736x/eb/24/b9/eb24b91c97f40e4ab8c180ee9f4cab9c.jpg')"
-  }}>
-            
-            <div
-            className="flex  inset-0 flex-col text-center gap-3 px-4 py-3  "
+        {/* </div> */}
 
-            >
-            <h2 className="font-medium text-lg text-white ">Our NewsLetters</h2>
-            <p className="text-white ">
-                Stay updated with our latest news, projects, and community highlights.
-                Enter your email below to join our mailing list.
-            </p>
-            <input
-                type="email"
-                placeholder="Email"
-                className="border px-3 py-1.5 rounded-2xl outline-none"
-            />
-            <button className="bg-green-950 text-white py-2 rounded-2xl font-medium">
-                Submit <i className="fa-solid fa-paper-plane"></i>
-            </button>
-            </div>
-
-
-        </div>
       </div><br /><br />
 
-        <div className="text-white  py-10 px-6">
-        <div className="flex flex-col md:flex-row items-center justify-evenly gap-8 text-center md:text-left">
 
-            {/* Phone */}
-            <div className="space-y-2 max-w-xs bg-green-950 py-7 px-4 rounded-2xl">
-            <div className="flex items-center justify-center md:justify-start gap-2">
-                <i className="fa-solid fa-phone-volume text-green-400 text-3xl"></i>
-                <p className="font-semibold">(+250) 787 845 162</p>
-            </div>
-            <p className="text-gray-300 text-sm">
-                Reach us anytime for inquiries or support — we’re here to help you 24/7.
-            </p>
-            </div>
-
-            {/* Email */}
-            <div className="space-y-2 max-w-xs bg-green-900 py-5 px-4 rounded-2xl">
-            <div className="flex items-center justify-center md:justify-start gap-2">
-                <i className="fa-solid fa-envelope text-green-400 text-3xl"></i>
-                <div>
-                <p className="font-semibold">techvibe@info.org</p>
-                <p className="font-semibold">techvibe@info.com</p>
-                </div>
-            </div>
-            <p className="text-gray-300 text-sm">
-                Send us your questions or partnership requests via email.
-            </p>
-            </div>
-
-            {/* Location */}
-            <div className="space-y-2 max-w-xs bg-green-800 py-7 px-4 rounded-2xl">
-            <div className="flex items-center justify-center md:justify-start gap-2">
-                <i className="fa-solid fa-location-dot text-green-400 text-3xl"></i>
-                <p className="font-semibold">Kigali, Rwanda</p>
-            </div>
-            <p className="text-gray-300 text-sm">
-                Visit our main office in Kigali for direct consultation and collaboration.
-            </p>
-            </div>
-
-        </div>
-        </div>
       {/* Google Map */}
       <div className="w-full flex justify-center mb-10">
         <iframe
@@ -129,8 +119,9 @@ function Contact(){
       </div>
 
 
-            <Footer/>
         </section>
+            <Footer/>
+      </section>
     )
 }
 export default Contact;

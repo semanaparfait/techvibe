@@ -1,4 +1,5 @@
 import React, {useState,useEffect} from 'react'
+import { Link } from "react-router-dom";
 import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
 import './Hero.css'
@@ -50,9 +51,11 @@ function Hero() {
 <br /><br />
         <div className='flex items-center justify-center gap-4 cursor-pointer '>
           <button className='text-black font-semibold bg-green-500 py-2 px-3 text-xs md:py-2.5 md:px-5 md:text-base rounded-3xl cursor-pointer'>Start Your project <i className="fa-solid fa-arrow-right"></i></button>
+          <Link to='projects'>
           <button className=" cursor-pointer  text-white font-semibold py-2 px-3 text-xs md:py-2.5 md:px-6 md:text-base border border-green-400 rounded-3xl hover:bg-green-500 hover:text-black hover:shadow-[0_0_15px_#22c55e] transition-all duration-300 ease-in-out">
             <i className="fa-solid fa-code"></i> View Our Work
           </button>
+          </Link>
 
         </div><br />
 

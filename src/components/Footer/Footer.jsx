@@ -1,11 +1,12 @@
 import React from 'react'
 import './Footer.css'
 import logo from '../../assets/logo2.png'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
-      <section className='footer-section  '>
-   <section className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-10 pt-16  text-gray-400 place-items-center">
+      <section className='footer-section h-screen '>
+   <section className="  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-10 pt-16  text-gray-400 place-items-center">
 
       <div>
         <div className='flex items-center mb-10'>
@@ -23,11 +24,11 @@ function Footer() {
       <div>
         <h1 className='font-bold text-2xl mb-7 text-white border-l-4 border-green-500 pl-2 cursor-pointer'>Quick Links</h1>
         <ul className='cursor-pointer'>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Services</li>
-          <li>Projects</li>
-          <li>Partners</li>
+      <li ><Link to="/">Home</Link></li>
+      <li ><Link to="/about">About</Link></li>
+      <li ><Link to="/services">Services</Link></li>
+      <li ><Link to="/projects">Projects</Link></li>
+      <li ><Link to="/contact us">Contact us</Link></li>
         </ul>
       </div>
       <div>
@@ -51,9 +52,13 @@ function Footer() {
         <footer className='py-[1.3rem] text-center border-t-2 border-gray-600  text-gray-400 bg-black  md:text-base text-sm'>
           &copy;{new Date().getFullYear()}TechVibe Africa All reserved. powed by innovation
         </footer>
-        <div className='bg-[#32f08c] text-black h-[50%] hidden'>
-          <h1 className='text-center'>TeachVibe</h1>
-        </div>
+      <div className="bg-[#32f08c] text-black h-[50%] text-center font-black text-[13rem] ">
+        <h1>TECH VIBE</h1>
+      </div>
+
+
+
+
     </section>
   )
 }

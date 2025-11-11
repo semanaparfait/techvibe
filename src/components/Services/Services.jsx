@@ -1,4 +1,5 @@
 import React, { useState,useEffect } from "react";
+import { Link } from "react-router-dom";
 import './Services.css'
 import {
   Laptop,
@@ -66,12 +67,14 @@ function Services() {
 
       {!showAll && (
         <div className="flex justify-center">
+          <Link to='services'>
           <button
-            onClick={() => setShowAll(true)}
+            
             className="more-services-btn bg-green-400 text-black rounded-2xl py-2 px-6 hover:bg-green-300 transition"
-          >
-            See Moree
+            >
+            See More
           </button>
+            </Link>
         </div>
       )}
     </section>

@@ -64,7 +64,7 @@ const services = [
             // >
                <div
                key={index}
-               className="bg-[#0a0f0e]/60 backdrop-blur-lg border border-[#2bc88c33] rounded-2xl p-8 shadow-[0_0_30px_rgba(43,200,140,0.1)] hover:shadow-[0_0_50px_rgba(43,200,170,0.1)] transition-all duration-500 hover:-translate-y-2">
+               className=" backdrop-blur-lg border border-[#2bc88c33] rounded-2xl p-8 shadow-[0_0_30px_rgba(43,200,140,0.1)] hover:shadow-[0_0_50px_rgba(43,200,170,0.1)] transition-all duration-500 hover:-translate-y-2">
               <div className="text-[#2bc88c] text-4xl mb-4">
                 <Icon size={40} color="#00FFC2" />
               </div>
