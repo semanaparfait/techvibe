@@ -12,12 +12,43 @@ import rwandaair from '../../assets/investors/rwandaair.png'
 import rca from '../../assets/investors/rca1.jpg'
 import movieland from '../../assets/investors/movieland.png'
 import Services from '../Services/Services'
+import allprojects from '../../pages/Data/Projects';
+import me from '../../../src/assets/team/ngwino.jpg'
 
 function Hero() {
+const [activeIndex, setActiveIndex] = useState(null);
 
-  
+  const faqs = [
+    {
+      question: "What is TechVibe Africa?",
+      answer:
+        "TechVibe Africa is a digital innovation hub that focuses on software development, UI/UX design, and empowering young African tech talents to create impactful solutions for the continent.",
+    },
+    {
+      question: "What services do you offer?",
+      answer:
+        "We specialize in web and mobile app development, UI/UX design, branding, and creative technology solutions tailored to businesses and startups in Africa.",
+    },
+    {
+      question: "How can I collaborate with TechVibe Africa?",
+      answer:
+        "You can contact us through our website or social media platforms. We welcome partnerships, client projects, and community collaborations focused on technology and innovation.",
+    },
+    {
+      question: "Do you offer mentorship or training?",
+      answer:
+        "Yes! We provide mentorship sessions and workshops to help young developers and designers enhance their skills and prepare for the global tech industry.",
+    },
+    {
+      question: "Where is TechVibe Africa based?",
+      answer:
+        "TechVibe Africa is proudly based in Rwanda, operating both locally and remotely across Africa to support innovation and digital transformation.",
+    },
+  ];
 
-
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   return (
     <section>
@@ -65,27 +96,27 @@ function Hero() {
         <div className='flex gap-3 text-center ml-3'>
           <div>
             <i className="fa-solid fa-code text-green-300 text-lg md:text-2xl"></i>
-            <p className='text-gray-300 font-semibold text-sm md:text-base'>Web/App Dev</p>
+            <p className='text-white font-semibold text-sm md:text-base'>Web/App Dev</p>
           </div>
           <div>
             <i className="fa-solid fa-cloud text-green-300 text-lg md:text-2xl"></i>
-            <p className='text-gray-300 font-semibold text-sm md:text-base'>Cloud Solutions</p>
+            <p className='text-white font-semibold text-sm md:text-base'>Cloud Solutions</p>
 
           </div>
           <div>
             <i className="fa-solid fa-shield-halved text-green-300 text-lg md:text-2xl"></i>
-            <p className='text-gray-300 font-semibold text-sm md:text-base'>Cyber Security</p>
+            <p className='text-white font-semibold text-sm md:text-base'>Cyber Security</p>
           </div>
           <div>
             <i className="fa-solid fa-robot text-green-300 text-lg md:text-2xl"></i>
-            <p className='text-gray-300 font-semibold text-sm md:text-base'>AI Solutions</p>
+            <p className='text-white font-semibold text-sm md:text-base'>AI Solutions</p>
           </div>
         </div><br />
         {/* ------------------trusted by section----------------- */}
         <div>
-        <div className='flex items-center justify-center flex-col gap-3'>
+        <div className='flex items-center justify-center flex-col gap-3 '>
 
-          <p className='text-gray-300 mt-3 font-semibold text-base ml-1 md:text-[18px]'>Rated 5/5 by our clients for quality service delivery</p>
+          <p className='text-white mt-3 font-semibold text-base ml-1 md:text-[18px]'>Rated 5/5 by our clients for quality service delivery</p>
         </div><br /><br />
 
         <section className="relative z-10 px-6 pb-16">
@@ -159,6 +190,130 @@ function Hero() {
         <div>
           <Services />
         </div>
+        {/* ---------------results---------- */}
+        <div><br />
+          <p className='font-medium leading-[18px] text-[13px] text-center'>SELECTED WORK</p>
+          <h1 className='font-medium md:leading-[108px] text-center md:text-[112px] text-[42px] leading-[40px] mb-10'>Proven results, <br /> stunning designs</h1>
+          <h1 className='text-center text-2xl font-bold'>2K25</h1><br /><br />
+        <div className="grid gap-10">
+          {/* First row (2 items) */}
+          <div className="flex flex-wrap justify-evenly gap-8">
+            {allprojects.slice(0, 2).map((project, index) => (
+              <div key={index} className=" max-w-lg">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className={`h-[14rem]  rounded-tl-[6px] rounded-br-[6px]  mb-4
+                    ${index === 0 ? 'w-[537px] h-[287px]' : ''}`}
+                />
+                <h1 className="text-[20px] font-bold mb-2">{project.title}</h1>
+                <p className="mb-3 text-[#0C0C0C99]">{project.description}</p>
+                <p className="font-semibold text-sm border w-fit  py-1 px-[6px] rounded-3xl">
+                  {project.category}
+                </p>
+              </div>
+            ))}
+          </div><br />
+
+          {/* Second row (1 item, centered) */}
+          <div className="flex justify-center">
+            {allprojects.slice(2, 3).map((project, index) => (
+              <div key={index} className=" ">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="rounded-tl-[10px] rounded-br-[10px] mb-4 w-[637px] h-[387px] "
+            />
+                <h1 className="text-[20px] font-bold mb-2">{project.title}</h1>
+                <p className="mb-3 text-[#0C0C0C99]">{project.description}</p>
+                <p className="font-semibold text-sm border w-fit  py-1 px-[6px] rounded-3xl">
+                  {project.category}
+                </p>
+              </div>
+            ))}
+          </div><br />
+
+          {/* Third row (2 items) */}
+          <div className="flex flex-wrap justify-evenly ">
+          {allprojects.slice(3, 5).map((project, index) => (
+            <div key={index} className="max-w-lg">
+              <img
+                src={project.image}
+                alt={project.title}
+                className={`h-[14rem]  mb-4 rounded-tl-[6px] rounded-br-[6px] 
+                  ${index === 1 ? 'w-[537px] h-[287px]' : ''}`}
+              />
+              <h1 className="text-[20px] font-bold mb-2">{project.title}</h1>
+              <p className="mb-3 text-[#0C0C0C99]">{project.description}</p>
+              <p className="font-semibold text-sm border w-fit py-1 px-[6px] rounded-3xl">
+                {project.category}
+              </p>
+            </div>
+          ))}
+
+          </div>
+        </div>
+        </div><br />
+        <h1 className='font-bold text-right mr-9 text-4xl'><i className="fa-solid fa-arrow-right"></i> All Projects</h1><br />
+    <div className="bg-black min-h-screen text-white flex flex-col md:flex-row items-center justify-evenly px-6 py-10">
+      <img
+        src={me}
+        alt="Founder"
+        className=" md:w-1/3 rounded-2xl shadow-lg mb-8 md:mb-0"
+      />
+
+      <div className="max-w-xl">
+        <h1 className="font-bold text-3xl md:text-4xl mb-4">
+          Who's Behind <span className="text-green-400">TechVibe Africa</span>
+        </h1>
+
+        <p className="text-[#0COCOC99] leading-relaxed">
+          The founder and creative lead behind <strong>TechVibe Africa</strong> —
+          your go-to hub for software development solutions across Africa.
+          <br /><br />
+          I started TechVibe Africa with a simple mission: to empower young African
+          innovators through technology. What began as a solo passion project soon
+          grew into a team of forward-thinking developers, designers
+          <br /><br />
+          I’m still hands-on in every project, leading the creative process, coding,
+          and crafting solutions that make an impact — because that’s where I truly
+          belong.
+        </p>
+
+        <hr className="my-6 border-gray-600" />
+
+        <h1 className="font-semibold text-xl md:text-2xl">SEMANA SHEMA Parfait</h1>
+        <h2 className="text-gray-400">Founder & Creative Lead</h2>
+      </div>
+    </div>
+    {/* ---------------frequently question------------- */}
+    <div className='flex h-full flex-wrap gap-6 items-center justify-evenly md:h-screen'>
+      <div className=' '>
+        <h1 className='text-[62px] font-bold'>FAQ</h1><br />
+        <p className='text-[#0COCOC99]'>We’ve heard it all. Here’s <br /> everything you need to know <br /> before working with us.</p>
+      </div>
+ <div className="md:w-[70%] px-4">
+      {faqs.map((faq, index) => (
+        <div key={index} className="mb-4 border-b pb-2">
+          <div
+            className="flex items-center justify-between cursor-pointer"
+            onClick={() => toggleFAQ(index)}
+          >
+            <h2 className="font-bold text-lg mb-2">{faq.question}</h2>
+            <i
+              className={`fa-solid text-green-600 ${
+                activeIndex === index ? "fa-minus" : "fa-plus"
+              }`}
+            ></i>
+          </div>
+          {activeIndex === index && (
+            <p className="text-[#0COCOC99] mt-2">{faq.answer}</p>
+          )}
+        </div>
+      ))}
+    </div>
+
+    </div>
 
         <Footer />
 
