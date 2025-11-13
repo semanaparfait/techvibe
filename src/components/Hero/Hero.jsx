@@ -53,8 +53,9 @@ const [activeIndex, setActiveIndex] = useState(null);
   return (
     <section>
         <div className='hero-section h-screen'>
+          
         <Navbar />
-        <div className='hero-content flex flex-col gap-2  h-full'>
+        <div className='hero-content flex flex-col gap-2  h-screen'>
           <div className="absolute -top-40 -right-20 w-96 h-96 
             bg-green-600 
             opacity-10
@@ -65,21 +66,25 @@ const [activeIndex, setActiveIndex] = useState(null);
      aria-hidden="true">
 </div>
           <div className=' '>
-      <div className="pt-[5rem] text-center space-y-6 ">
-      <h1 className="text-2xl md:text-4xl font-extrabold text-white">
-        Turning <span className="text-green-400">Ideas</span> Into Digital Reality
+      <div className="pt-[5rem] text-center space-y-6 mt-[30px] flex flex-col items-center">
+      <h1 className="text-lg md:text-5xl font-extrabold text-white ">
+        Turning your <span className="text-green-400">Ideas</span> Into Digital <br /> Reality
       </h1>
-      <h2 className="text-lg  md:text-2xl font-bold text-white ">
+      <p className='text-white text-center max-w-xl'> We craft innovative digital experiences that bring your vision to life — blending creativity, technology, and strategy to build solutions that truly make an impact.</p>
+      <div className='flex gap-3 items-center justify-center hidden'>
+
+      <h2 className="  md:text-base  text-white  ">
         What we do best
-        <span className="all-services bg-green-400 text-black text-sm md:text-base py-1 px-3 rounded-lg "></span>
       </h2>
+        <span className="all-services bg-green-400 text-black text-sm md:text-base py-1 px-3 rounded-lg "></span>
+      </div>
 
 
         <p className="text-xl md:text-2xl text-white px-4 max-w-3xl mx-auto hidden">
           Empowering Your Digital Future with Innovative Tech Solutions
         </p>
       </div>
-<br /><br />
+        <br /><br />
         <div className='flex items-center justify-center gap-4 cursor-pointer '>
           <button className='text-black font-semibold bg-green-500 py-2 px-3 text-xs md:py-2.5 md:px-5 md:text-base rounded-3xl cursor-pointer'>Start Your project <i className="fa-solid fa-arrow-right"></i></button>
           <Link to='projects'>
@@ -93,87 +98,92 @@ const [activeIndex, setActiveIndex] = useState(null);
           </div><br />
 
         {/* -------------------some services section----------------- */}
-        <div className='flex gap-3 text-center ml-3'>
-          <div>
+        <div className='flex justify-evenly gap-3 text-center ml-3 mt-[50px] opacity-[.9]'>
+          <div className='flex items-center gap-2'>
             <i className="fa-solid fa-code text-green-300 text-lg md:text-2xl"></i>
-            <p className='text-white font-semibold text-sm md:text-base'>Web/App Dev</p>
+            <p className='text-white font-semibold text-sm md:text-base '>Web/App Dev</p>
           </div>
-          <div>
+          <div className='flex items-center gap-2'>
             <i className="fa-solid fa-cloud text-green-300 text-lg md:text-2xl"></i>
             <p className='text-white font-semibold text-sm md:text-base'>Cloud Solutions</p>
 
           </div>
-          <div>
+          <div className='flex items-center gap-2'>
             <i className="fa-solid fa-shield-halved text-green-300 text-lg md:text-2xl"></i>
             <p className='text-white font-semibold text-sm md:text-base'>Cyber Security</p>
           </div>
-          <div>
+          <div className='flex items-center gap-2'>
             <i className="fa-solid fa-robot text-green-300 text-lg md:text-2xl"></i>
             <p className='text-white font-semibold text-sm md:text-base'>AI Solutions</p>
           </div>
         </div><br />
+
+        </div>
+
+        {/* --------------------sponsers------- */}
+        </div>
         {/* ------------------trusted by section----------------- */}
-        <div>
+        <div className='bg-white text-black  py-7 hidden'>
         <div className='flex items-center justify-center flex-col gap-3 '>
 
-          <p className='text-white mt-3 font-semibold text-base ml-1 md:text-[18px]'>Rated 5/5 by our clients for quality service delivery</p>
+          <p className=' mt-3 font-semibold text-base ml-1 md:text-[18px]'>Rated 5/5 by our clients for quality service delivery</p>
         </div><br /><br />
 
-        <section className="relative z-10 px-6 pb-16">
+        <section className="relative z-10 px-6 ">
           {/* 1. Add overflow-hidden here */}
           <div className="max-w-7xl mx-auto overflow-hidden">
             {/* 2. Add 'animate-scroll' and remove 'justify-center' */}
             <div className="flex items-center justify-start gap-12 md:gap-16 animate-scroll cursor-pointer">
               
               {/* 3. Add 'flex-shrink-0' and 'whitespace-nowrap' to ALL items */}
-              <div className="text-white/80 text-xl font-semibold flex items-center space-x-2 flex-shrink-0 whitespace-nowrap">
+              <div className=" text-xl font-semibold flex items-center space-x-2 flex-shrink-0 whitespace-nowrap border">
                 <span className="text-2xl">⚡</span>
                 <span>CodeAfrique</span>
               </div>
-              <div className="text-white/80 text-xl font-semibold flex items-center space-x-2 flex-shrink-0 whitespace-nowrap">
+              <div className=" text-xl font-semibold flex items-center space-x-2 flex-shrink-0 whitespace-nowrap">
                 <span className="text-2xl">✦</span>
                 <span>NaijaTech</span>
               </div>
-              <div className="text-white/80 text-xl font-semibold flex items-center space-x-2 flex-shrink-0 whitespace-nowrap">
+              <div className=" text-xl font-semibold flex items-center space-x-2 flex-shrink-0 whitespace-nowrap">
                 <span className="text-2xl">⚡</span>
                 <span>SecureConnect</span>
               </div>
-              <div className="text-white/80 text-xl font-semibold flex items-center space-x-2 flex-shrink-0 whitespace-nowrap">
+              <div className=" text-xl font-semibold flex items-center space-x-2 flex-shrink-0 whitespace-nowrap">
                 <span className="text-2xl">⟲</span>
                 <span>DataFlow</span>
               </div>
-              <div className="text-white/80 text-xl font-semibold flex items-center space-x-2 flex-shrink-0 whitespace-nowrap">
+              <div className=" text-xl font-semibold flex items-center space-x-2 flex-shrink-0 whitespace-nowrap">
                 <span className="text-2xl">☁</span>
                 <span>CloudBurst</span>
               </div>
-              <div className="text-white/80 text-xl font-semibold flex items-center space-x-2 flex-shrink-0 whitespace-nowrap">
+              <div className=" text-xl font-semibold flex items-center space-x-2 flex-shrink-0 whitespace-nowrap">
                 <span className="text-2xl">📱</span>
                 <span>AppNaWeb</span>
               </div>
 
               {/* --- DUPLICATED SET --- */}
               {/* (Remember to add the classes to these too!) */}
-              <div className="text-white/80 text-xl font-semibold flex items-center space-x-2 flex-shrink-0 whitespace-nowrap">
+              <div className=" text-xl font-semibold flex items-center space-x-2 flex-shrink-0 whitespace-nowrap">
                 <span className="text-2xl">⚡</span>
                 <span>CodeAfrique</span>
               </div>
-              <div className="text-white/80 text-xl font-semibold flex items-center space-x-2 flex-shrink-0 whitespace-nowrap">
+              <div className=" text-xl font-semibold flex items-center space-x-2 flex-shrink-0 whitespace-nowrap">
                 <span className="text-2xl">✦</span>
                 <span>NaijaTech</span>
               </div>
-              <div className="text-white/80 text-xl font-semibold flex items-center space-x-2 flex-shrink-0 whitespace-nowrap">
+              <div className=" text-xl font-semibold flex items-center space-x-2 flex-shrink-0 whitespace-nowrap">
                 <span className="text-2xl">⚡</span>
                 <span>SecureConnect</span>
               </div>
-              <div className="text-white/80 text-xl font-semibold flex items-center space-x-2 flex-shrink-0 whitespace-nowrap">
+              <div className=" text-xl font-semibold flex items-center space-x-2 flex-shrink-0 whitespace-nowrap">
                 <span className="text-2xl">⟲</span>
                 <span>DataFlow</span>
               </div>
-              <div className="text-white/80 text-xl font-semibold flex items-center space-x-2 flex-shrink-0 whitespace-nowrap">
+              <div className=" text-xl font-semibold flex items-center space-x-2 flex-shrink-0 whitespace-nowrap">
                 <span className="text-2xl">☁</span>
                 <span>CloudBurst</span>
               </div>
-              <div className="text-white/80 text-xl font-semibold flex items-center space-x-2 flex-shrink-0 whitespace-nowrap">
+              <div className=" text-xl font-semibold flex items-center space-x-2 flex-shrink-0 whitespace-nowrap">
                 <span className="text-2xl">📱</span>
                 <span>AppNaWeb</span>
               </div>
@@ -181,11 +191,6 @@ const [activeIndex, setActiveIndex] = useState(null);
             </div>
           </div>
         </section>
-        </div>
-
-
-        </div>
-        {/* --------------------sponsers------- */}
         </div>
         <div>
           <Services />
@@ -204,7 +209,7 @@ const [activeIndex, setActiveIndex] = useState(null);
                   src={project.image}
                   alt={project.title}
                   className={`h-[14rem]  rounded-tl-[6px] rounded-br-[6px]  mb-4
-                    ${index === 0 ? 'w-[537px] h-[287px]' : ''}`}
+                    ${index === 0 ? 'md:w-[537px] md:h-[287px]' : ''}`}
                 />
                 <h1 className="text-[20px] font-bold mb-2">{project.title}</h1>
                 <p className="mb-3 text-[#0C0C0C99]">{project.description}</p>
@@ -241,7 +246,7 @@ const [activeIndex, setActiveIndex] = useState(null);
                 src={project.image}
                 alt={project.title}
                 className={`h-[14rem]  mb-4 rounded-tl-[6px] rounded-br-[6px] 
-                  ${index === 1 ? 'w-[537px] h-[287px]' : ''}`}
+                  ${index === 1 ? 'md:w-[537px] md:h-[287px]' : ''}`}
               />
               <h1 className="text-[20px] font-bold mb-2">{project.title}</h1>
               <p className="mb-3 text-[#0C0C0C99]">{project.description}</p>
@@ -265,7 +270,7 @@ const [activeIndex, setActiveIndex] = useState(null);
       <div className="max-w-xl">
         <h1 className="font-bold text-3xl md:text-4xl mb-4">
           Who's Behind <span className="text-green-400">TechVibe Africa</span>
-        </h1>
+        </h1><br />
 
         <p className="text-[#0COCOC99] leading-relaxed">
           The founder and creative lead behind <strong>TechVibe Africa</strong> —

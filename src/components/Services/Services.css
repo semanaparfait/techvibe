@@ -1,9 +1,9 @@
 .services-section{
     background-color: #050807;
-}
-.services-section {
-  /* position: relative; Required for the pseudo-element to be positioned correctly */
-  /* overflow: hidden; Prevents the large gradients from causing scrollbars */
+position: relative;
+ /* Required for the pseudo-element to be positioned correctly */
+overflow: hidden;
+ /* Prevents the large gradients from causing scrollbars */
 }
 
 .services-section::before {

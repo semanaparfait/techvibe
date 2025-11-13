@@ -1,34 +1,12 @@
 .hero-section{
-background-color: #050807;
-
-}
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+    background-color: #050807;
+    /* background-color: aqua; */
+    position: relative;
+     /* Required for the pseudo-element to be positioned correctly */
+    overflow: hidden;
+     /* Prevents the large gradients from causing scrollbars */
 }
 
-.animate-scroll {
-  display: inline-flex;
-  animation: scroll 12s linear infinite;
-  width: max-content;
-}
-
-/* Hero.css */
-
-/* This is the magic for the background.
-  We create a ::before pseudo-element that sits *behind* your content
-  (which we gave a z-index in the React file).
-*/
-.hero-section {
-  position: relative;
-   /* Required for the pseudo-element to be positioned correctly */
-  overflow: hidden;
-   /* Prevents the large gradients from causing scrollbars */
-}
 
 .hero-section::before {
   content: "";
@@ -43,14 +21,14 @@ background-color: #050807;
   background-image: 
     /* 1. Top-right arc */
     radial-gradient(
-      circle at 110% -10%, /* Positioned off-screen to the top-right */
-      rgba(40, 200, 140, 0.25) 5%, /* Green glow with 25% opacity */
+      circle at 120% -10%, /* Positioned off-screen to the top-right */
+      rgba(59, 40, 200, 0.25) 5%, /* Green glow with 25% opacity */
       transparent 40% /* Fades to transparent */
     ),
     
     /* 2. Middle-left arc */
     radial-gradient(
-      circle at -10% 70%, /* Positioned off-screen to the middle-left */
+      circle at -20% 70%, /* Positioned off-screen to the middle-left */
       rgba(40, 200, 140, 0.2) 5%, 
       transparent 35%
     );
@@ -61,11 +39,24 @@ background-color: #050807;
   filter: blur(60px);
   pointer-events: none;
 }
-
-/* Define the animation keyframes.
-  'translateX(-50%)' moves the content left by the exact 
-  width of your *first* set of items, creating a perfect loop.
-*/
+    
+    .animate-scroll {
+      display: inline-flex;
+      animation: scroll 12s linear infinite;
+      width: max-content;
+    }
+    /* Define the animation keyframes.
+    'translateX(-50%)' moves the content left by the exact 
+    width of your *first* set of items, creating a perfect loop.
+    */
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
 @keyframes scroll {
   0% {
     transform: translateX(0);
