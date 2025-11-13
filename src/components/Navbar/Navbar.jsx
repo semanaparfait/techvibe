@@ -12,7 +12,7 @@ function Navbar({ variant }) {
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
     { name: 'Projects', path: '/projects' },
-    { name: 'Contact us', path: '/contact us' },
+    { name: 'Contact us', path: '/contact-us' },
   ]
 
   return (

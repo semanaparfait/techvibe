@@ -69,6 +69,12 @@
 /* --- Custom Scrollbar for "TechVibe Africa" --- */
 
 /* This works for Firefox */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 html {
   scrollbar-width: thin;
   scrollbar-color: #16a34a #111827; /* thumb-color track-color */

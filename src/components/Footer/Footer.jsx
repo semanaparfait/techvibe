@@ -59,9 +59,11 @@ function Footer() {
             <button className="bg-green-900 py-4 px-7 rounded-3xl md:text-[20px] font-medium hover:bg-green-800 transition">
               <i className="fa-solid fa-arrow-right"></i> Book a Call
             </button>
-            <button className="bg-white text-black px-7 py-4 rounded-3xl md:text-[20px] font-medium hover:bg-gray-200 transition">
+            {/* <button > */}
+            <Link to='contact us' className="bg-white text-black px-7 py-4 rounded-3xl md:text-[20px] font-medium hover:bg-gray-200 transition">
               <i className="fa-solid fa-arrow-right"></i> Contact us
-            </button>
+            </Link>
+            {/* </button> */}
           </div>
           <br />
           <br />
@@ -76,7 +78,9 @@ function Footer() {
           </div>
         </section>
       </div>
-   <section className="  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-10 pt-16  text-gray-400 place-items-center">
+      <section className=' 'style={{alignItems:"start"}}>
+
+   <section className="p-3  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-10 pt-16  text-gray-400 place-items-center ">
 
       <div>
         <div className='flex items-center mb-10'>
@@ -122,8 +126,9 @@ function Footer() {
         <footer className='py-[1.3rem] text-center border-t-2 border-gray-600  text-gray-400 bg-black  md:text-base text-sm'>
           &copy;{new Date().getFullYear()}TechVibe Africa All reserved. powed by innovation
         </footer>
+        </section>
       <div className="bg-[#32f08c] text-black h-[20%] md:h-[50%] text-center font-black text-[8
-      rem] md:text-[13rem] ">
+      rem] md:text-[13rem]  sticky bottom-0" >
         <h1>TECH VIBE</h1>
       </div>
 

@@ -52,12 +52,12 @@ const [activeIndex, setActiveIndex] = useState(null);
 
   return (
     <section>
-        <div className='hero-section h-screen'>
+        <div className='hero-section h-screen w-full  '>
           
         <Navbar />
-        <div className='hero-content flex flex-col gap-2  h-screen'>
+        <div className='hero-content flex flex-col items-center justify-center gap-6   h-screen md:pt-0 pb-28'>
           <div className="absolute -top-40 -right-20 w-96 h-96 
-            bg-green-600 
+            bg-green-800 
             opacity-10
             rounded-full 
             mix-blend-screen 
@@ -66,11 +66,11 @@ const [activeIndex, setActiveIndex] = useState(null);
      aria-hidden="true">
 </div>
           <div className=' '>
-      <div className="pt-[5rem] text-center space-y-6 mt-[30px] flex flex-col items-center">
-      <h1 className="text-lg md:text-5xl font-extrabold text-white ">
-        Turning your <span className="text-green-400">Ideas</span> Into Digital <br /> Reality
-      </h1>
-      <p className='text-white text-center max-w-xl'> We craft innovative digital experiences that bring your vision to life — blending creativity, technology, and strategy to build solutions that truly make an impact.</p>
+      <div className="  text-center space-y-6 mt-[30px] flex flex-col items-center">
+      <h1 className="text-[30px] md:text-5xl font-extrabold text-white max-w-xl ">
+        Turning your <span className="text-green-400">Ideas</span> Into Digital Reality
+      </h1><br />
+      <p className='text-white text-center max-w-lg text-sm md:text-base'> We craft innovative digital experiences that bring your vision to life — blending creativity, technology, and strategy to build solutions that truly make an impact.</p>
       <div className='flex gap-3 items-center justify-center hidden'>
 
       <h2 className="  md:text-base  text-white  ">
@@ -98,23 +98,23 @@ const [activeIndex, setActiveIndex] = useState(null);
           </div><br />
 
         {/* -------------------some services section----------------- */}
-        <div className='flex justify-evenly gap-3 text-center ml-3 mt-[50px] opacity-[.9]'>
+        <div className='flex justify-evenly  text-center   opacity-[.9]  w-full'>
           <div className='flex items-center gap-2'>
-            <i className="fa-solid fa-code text-green-300 text-lg md:text-2xl"></i>
-            <p className='text-white font-semibold text-sm md:text-base '>Web/App Dev</p>
+            <i className="fa-solid fa-code text-green-300  md:text-2xl"></i>
+            <p className='text-white font-semibold text-[12px] md:text-base '>Web/App Dev</p>
           </div>
           <div className='flex items-center gap-2'>
             <i className="fa-solid fa-cloud text-green-300 text-lg md:text-2xl"></i>
-            <p className='text-white font-semibold text-sm md:text-base'>Cloud Solutions</p>
+            <p className='text-white font-semibold text-[12px] md:text-base'>Cloud Solutions</p>
 
           </div>
           <div className='flex items-center gap-2'>
             <i className="fa-solid fa-shield-halved text-green-300 text-lg md:text-2xl"></i>
-            <p className='text-white font-semibold text-sm md:text-base'>Cyber Security</p>
+            <p className='text-white font-semibold text-[12px] md:text-base'>Cyber Security</p>
           </div>
-          <div className='flex items-center gap-2'>
+          <div className='hidden md:flex items-center gap-2'>
             <i className="fa-solid fa-robot text-green-300 text-lg md:text-2xl"></i>
-            <p className='text-white font-semibold text-sm md:text-base'>AI Solutions</p>
+            <p className='text-white font-semibold text-[12px] md:text-base'>AI Solutions</p>
           </div>
         </div><br />
 
@@ -260,7 +260,7 @@ const [activeIndex, setActiveIndex] = useState(null);
         </div>
         </div><br />
         <h1 className='font-bold text-right mr-9 text-4xl'><i className="fa-solid fa-arrow-right"></i> All Projects</h1><br />
-    <div className="bg-black min-h-screen text-white flex flex-col md:flex-row items-center justify-evenly px-6 py-10">
+    <div className="profile-text min-h-screen text-white flex flex-col md:flex-row items-center justify-evenly px-6 py-10">
       <img
         src={me}
         alt="Founder"

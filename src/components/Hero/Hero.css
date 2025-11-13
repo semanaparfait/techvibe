@@ -1,4 +1,5 @@
-.hero-section{
+.hero-section,
+.profile-text{
     background-color: #050807;
     /* background-color: aqua; */
     position: relative;
@@ -8,7 +9,8 @@
 }
 
 
-.hero-section::before {
+.hero-section::before,
+.profile-text::before {
   content: "";
   position: absolute;
   top: 0;
@@ -22,7 +24,7 @@
     /* 1. Top-right arc */
     radial-gradient(
       circle at 120% -10%, /* Positioned off-screen to the top-right */
-      rgba(59, 40, 200, 0.25) 5%, /* Green glow with 25% opacity */
+       rgba(40, 200, 140, 0.2) 5%,  /* Green glow with 25% opacity */
       transparent 40% /* Fades to transparent */
     ),
     
