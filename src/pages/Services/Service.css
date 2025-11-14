@@ -1,11 +1,10 @@
 .servicespage-body{
-background-color: #050807;
-position: relative;
- /* Required for the pseudo-element to be positioned correctly */
-overflow: hidden;
- /* Prevents the large gradients from causing scrollbars */
- 
-
+    background-color: #050807;
+    /* background-color: aqua; */
+    position: relative;
+     /* Required for the pseudo-element to be positioned correctly */
+    overflow: hidden;
+     /* Prevents the large gradients from causing scrollbars */
 }
 
 
@@ -16,20 +15,20 @@ overflow: hidden;
   left: 0;
   right: 0;
   bottom: 0;
-  /* z-index: 0; Sits *behind* your content (which is z-index-10) */
+  z-index: 0; /* Sits *behind* your content (which is z-index-10) */
 
   /* These are the two radial gradients */
   background-image: 
     /* 1. Top-right arc */
     radial-gradient(
-      circle at 110% -10%, /* Positioned off-screen to the top-right */
+      circle at 120% -10%, /* Positioned off-screen to the top-right */
       rgba(40, 200, 140, 0.25) 5%, /* Green glow with 25% opacity */
       transparent 40% /* Fades to transparent */
     ),
     
     /* 2. Middle-left arc */
     radial-gradient(
-      circle at -10% 70%, /* Positioned off-screen to the middle-left */
+      circle at -20% 70%, /* Positioned off-screen to the middle-left */
       rgba(40, 200, 140, 0.2) 5%, 
       transparent 35%
     );

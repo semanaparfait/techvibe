@@ -16,7 +16,8 @@ function Navbar({ variant }) {
   ]
 
   return (
-    <nav
+  <header>
+        <nav
       className={`${variant === 'about' ? 'absolute' : 'sticky'} top-0 left-0 w-full z-20    flex items-center justify-between px-6 py-3`}
     >
       {/* Logo */}
@@ -69,6 +70,7 @@ function Navbar({ variant }) {
         </div>
       )}
     </nav>
+  </header>
   )
 }
 

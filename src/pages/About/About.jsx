@@ -4,29 +4,42 @@ import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import about from '../../assets/about/about1.jpg'
 import ngwino from '../../assets/team/ngwino.jpg'
-
+import gilbert from '../../assets/team/gilbert.png'
+import semana from '../../assets/team/semana1.jpg'
+import bigg from '../../assets/team/bigg.jpg'
 function About() {
     const [visible,setVisible]=useState("about")
-    const team =[
-      {
-        name: "SEMANA SHEMA Parfait",
-        role: "Full Stack developer",
-        img: ngwino,
-      },{
-        name: "BISANGWA Ally Faith",
-        role: "UI/UX Designer",
-        img: ngwino,
-      },{
-        name: "Christian Ngwino Regnante",
-        role: "Systems Analyst",
-        img: ngwino,
-      },{
-        name: "MURAMIRABAGABO Gilbert",
-        role: "DevOps Engineer",
-        img: ngwino,
-      }
+const team = [
+  {
+    name: "SEMANA SHEMA Parfait",
+    role: "Full Stack Developer",
+    img: semana,
+    paragraph: "Passionate full stack developer with experience in building responsive web applications and solving complex problems.",
+    phoneNumber: "+250787845162",
+  },
+  {
+    name: "BISANGWA Ally Faith",
+    role: "UI/UX Designer",
+    img: bigg,
+    paragraph: "Creative UI/UX designer focused on building intuitive and engaging user experiences.",
+    phoneNumber: "+250788123456",
+  },
+  {
+    name: "Christian Ngwino Regnante",
+    role: "Systems Analyst",
+    img: ngwino,
+    paragraph: "Expert in analyzing system requirements and optimizing workflows for maximum efficiency.",
+    phoneNumber: "+250789654321",
+  },
+  {
+    name: "MURAMIRABAGABO Gilbert",
+    role: "DevOps Engineer",
+    img: gilbert,
+    paragraph: "Skilled in automating deployments, CI/CD pipelines, and ensuring reliable system operations.",
+    phoneNumber: "+250787654987",
+  },
+];
 
-    ]
   return (
     <section>
       <Navbar variant="about" />
@@ -217,22 +230,47 @@ function About() {
 </div>
 {/* ---------meet our team section------------ */}
   <div className='team-containerr'><br />
-    <h1 className='text-center font-semibold text-3xl text-white'>Meet Our <span className='bg-green-950 text-white py-2 px-3 rounded-tl-2xl rounded-br-2xl'>Team</span></h1><br />
-    <div className='flex items-center justify-evenly flex-wrap gap-3'>
-{team.map((member,index)=>(
-    <div key={index} className="team-member-card bg-[#e5e5e5] flex flex-col items-center gap-3 px-4 py-14 border rounded-full shadow-lg">
-        <div className="member-photo-placeholder">
-            {/* <i className="fa-solid fa-user fa-5x text-gray-400"></i> */}
-            <img src={member.img} alt={`${member.name} member name`}  className='w-40 h-40 rounded-full '/>
+    <h1 className='text-center font-semibold text-3xl text-white'>Meet Our <span className='bg-green-950 text-white py-2 px-3 rounded-tl-2xl rounded-br-2xl'>Team</span></h1><br /><br />
+<div className="grid md:grid-cols-4 justify-items-center gap-6 text-white">
+  {team.map((member, index) => (
+    <div
+      key={index}
+      className="relative w-[80%] rounded-2xl overflow-hidden group cursor-pointer"
+    >
+      {/* Image */}
+      <img
+        src={member.img}
+        alt={member.name}
+        loading='lazy'
+        className="rounded-2xl w-full duration-300 group-hover:scale-110"
+      />
 
-        </div>
-        <h3 className="member-name font-semibold">{member.name}</h3>  
-        <p className="member-role text-green-950">{member.role}</p>
-        <button className='bg-green-950 cursor-pointer text-white py-1 px-3 rounded-tl-2xl rounded-br-2xl'>Talk to {member.name.split(" ").pop()}</button>
+      {/* Text under the image */}
+      <div className="absolute bottom-0 left-0 right-0 text-center p-3 bg-black/40 backdrop-blur-sm">
+        <h3 className="font-bold">{member.name}</h3>
+        <p className="text-gray-200 text-sm">{member.role}</p>
+      </div>
 
+      {/* Overlay on hover */}
+      <div className="
+        absolute inset-0 bg-black/80  
+        flex flex-col items-center justify-center text-center 
+        opacity-0 group-hover:opacity-100 transition duration-300 p-4
+      ">
+        <h1 className="text-lg font-bold">{member.name}</h1>
+        <p className="text-green-400">{member.role}</p>
+        <p className="text-sm mt-2">{member.paragraph}</p>
+
+        <a href={`tel:${member.phoneNumber}`}>
+          <button className="mt-4 bg-green-600 py-2 px-4 rounded-xl hover:bg-green-700">
+            Call {member.name.split(" ").pop()}
+          </button>
+        </a>
+      </div>
     </div>
-))}
-    </div>
+  ))}
+</div><br /><br />
+
     
   </div>
       </div>

@@ -33,6 +33,7 @@ const services = [
               <img 
                 src={service} 
                 alt="about bg" 
+                loading='lazy'
                 className="h-[40vh] w-full object-cover  brightness-[0.3]" 
               />
               {/* Overlay text */}
@@ -64,7 +65,7 @@ const services = [
             // >
                <div
                key={index}
-               className=" backdrop-blur-lg border border-[#2bc88c33] rounded-2xl p-8 shadow-[0_0_30px_rgba(43,200,140,0.1)] hover:shadow-[0_0_50px_rgba(43,200,170,0.1)] transition-all duration-500 hover:-translate-y-2">
+               className=" backdrop-blur-lg border border-[#2bc88c33] rounded-2xl p-8  hover: transition-all duration-500 hover:-translate-y-2">
               <div className="text-[#2bc88c] text-4xl mb-4">
                 <Icon size={40} color="#00FFC2" />
               </div>
@@ -83,7 +84,7 @@ const services = [
         })}
       </div>
               </div>
-              <div className='mb-10'>
+              <div className='mb-10 hidden'>
             <h2 className="steps-title text-3xl md:text-4xl font-extrabold text-center mb-3 text-white ">
           Our Simple Process
           </h2>
@@ -143,7 +144,7 @@ const services = [
 </div>
         
               </div>
-<div className='w-full md:w-1/2 flex flex-col items-center justify-center md:mx-auto  '>
+<div className='w-full md:w-1/2 flex flex-col items-center justify-center md:mx-auto hidden  '>
 <i className="fa-solid fa-lightbulb text-center text-white text-[550px] m-auto z-50 overflow-hidden  "></i>
   <div className='steps-container w-full flex flex-col items-center absolute overflow-hidden'>
     
