@@ -60,7 +60,7 @@ function Footer() {
               <i className="fa-solid fa-arrow-right"></i> Book a Call
             </button>
             {/* <button > */}
-            <Link to='contact us' className="bg-white text-black px-7 py-4 rounded-3xl md:text-[20px] font-medium hover:bg-gray-200 transition">
+            <Link to='contact-us' className="bg-white text-black px-7 py-4 rounded-3xl md:text-[20px] font-medium hover:bg-gray-200 transition">
               <i className="fa-solid fa-arrow-right"></i> Contact us
             </Link>
             {/* </button> */}
@@ -123,11 +123,13 @@ function Footer() {
       </div>
       </section>
       <h1 className='footer-name text-center text-[40px] md:text-[100px] text-white font-black  '>Techvibe Africa</h1>
-        <footer className='py-[1.3rem] text-center border-t-2 border-gray-600  text-gray-400 bg-black  md:text-base text-sm'>
+        
+        <hr />
+        <footer className='py-[1.3rem] text-center   text-gray-400 bg-black  md:text-base text-sm'>
           &copy;{new Date().getFullYear()}TechVibe Africa All reserved. powed by innovation
         </footer>
         </section>
-      <div className="bg-[#32f08c] text-black h-[20%] md:h-[50%] text-center font-black text-[8
+      <div className="hidden bg-[#32f08c] text-black h-[20%] md:h-[50%] text-center font-black text-[8
       rem] md:text-[13rem]  sticky bottom-0" >
         <h1>TECH VIBE</h1>
       </div>

@@ -72,7 +72,7 @@ function Services() {
             
             className="more-services-btn bg-green-400 text-black rounded-2xl py-2 px-6 hover:bg-green-300 transition"
             >
-            See More
+            See Moree
           </button>
             </Link>
         </div>

@@ -98,7 +98,7 @@ const [activeIndex, setActiveIndex] = useState(null);
           </div><br />
 
         {/* -------------------some services section----------------- */}
-        <div className='flex justify-evenly  text-center   opacity-[.9]  w-full'>
+        <div className='flex justify-evenly  text-center opacity-[.9]  w-full'>
           <div className='flex items-center gap-2'>
             <i className="fa-solid fa-code text-green-300  md:text-2xl"></i>
             <p className='text-white font-semibold text-[12px] md:text-base '>Web/App Dev</p>
